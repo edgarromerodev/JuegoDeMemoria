@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    padding: 20px 10px;
+    flex: 1;
+    background-color: #141415;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/*Mostrar imagen cuando la carta esta volteada o emperaja*/
+.card.flipped img, 
+.card.matched img {
+ display: block;
+}
+
+/*Cuando la imagen esta seleccionada cambiar el color de fondo*/
+.card.flipped, 
+.card.matched {
+    background-color: #d4edda;
+    cursor: default;
+}
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    align-items: flex-start;
+    width: 300px;
+    background-color: #3931e1;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #141415;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
